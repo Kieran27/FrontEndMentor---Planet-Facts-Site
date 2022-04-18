@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer charset="utf-8"></script>
+
+  <title>Frontend Mentor | Planets fact site</title>
+</head>
+
+<body>
+  <section class="intro">
+    <div class="intro-title-container">
+      <h1>The Planets</h1>
+    </div>
+  </section>
+
+  <header>
+    <div class="mobile-header">
+      <h2>The Planets</h2>
+      <div class="hamburger-menu">
+        <button><img src="assets/icon-hamburger.svg" alt="hamburger-icon"></button>
+      </div>
+    </div>
+    <div class="desktopdiv">
+      <div class="header-title-container">
+        <h2>The Planets</h2>
+      </div>
+      <nav class="planetary-nav">
+        <button data-link='link' class="planet-link" id='mercury-btn'>
+          <h4 id='mercury' class='Mercury-dsk'>Mercury</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='venus-btn'>
+          <h4 id='venus' class='Venus-dsk'>Venus</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='earth-btn'>
+          <h4 id='earth' class='Earth-dsk'>Earth</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='mars-btn'>
+          <h4 id='mars' class='Mars-dsk'>mars</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='jupiter-btn'>
+          <h4 id='jupiter' class='Jupiter-dsk'>Jupiter</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='saturn-btn'>
+          <h4 id='saturn' class='Saturn-dsk'>Saturn</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='uranus-btn'>
+          <h4 id='uranus' class='Uranus-dsk'>Uranus</h4>
+        </button>
+        <button data-link='link' class="planet-link" id='neptune-btn'>
+          <h4 id='neptune' class='Neptune-dsk'>Neptune</h4>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-planet-nav">
+    <div class="mobile-planet-nav-container">
+      <button onclick='overviewFunction()'>
+        <h4>Overview</h4>
+        <span id='overview' class="border border-active"></span>
+      </button>
+      <button onclick='structureFunction()'>
+        <h4>Structure</h4>
+        <span id='structure' class="border"></span>
+      </button>
+      <button onclick='geologyFunction()'>
+        <h4>Surface</h4>
+        <span id='geology' class="border"></span>
+      </button>
+    </div>
+  </nav>
+  <nav class="mobile-pullout-nav">
+    <div class="mobile-pullout-content">
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='mercury'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon mercury"></span>
+          <h3>Mercury</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='venus'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon venus"></span>
+          <h3>Venus</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='earth'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon earth"></span>
+          <h3>Earth</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='mars'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon mars"></span>
+          <h3>Mars</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='jupiter'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon jupiter"></span>
+          <h3>Jupiter</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='saturn'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon saturn"></span>
+          <h3>Saturn</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='neptune'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon neptune"></span>
+          <h3>Neptune</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+      <div tabIndex='0' data-link='link' class="mobile-pullout-item" id='uranus'>
+        <div class="mobile-pullout-item-left">
+          <span class="pullout-icon uranus"></span>
+          <h3>Uranus</h3>
+        </div>
+        <div class="mobile-pullout-item-right">
+          <img src="assets/icon-chevron.svg" alt="chevron-icon">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+
+  </main>
+
+  <template>
+    <div class="planet-container">
+      <section class="mega-container">
+        <section class='planet-img'>
+          <img id='img-planet' class='vito' src="assets/planet-earth.svg" alt="Planet-Overview-Image">
+          <img id='img-internal' src="assets/planet-earth-internal.svg" alt="Planet-Internal-Image">
+          <div class="planet-img-geology"><img id='img-geology' src="assets/geology-earth.png" alt="Planet-Geology-Image"></div>
+        </section>
+        <section class="planet-data-container">
+          <section class="planet-info">
+            <div class="planet-title">
+              <h2 id='planet-title'>Earth</h2>
+            </div>
+            <div class="planet-text">
+              <p id='planet-content'>Third planet from the Sun and the only known planet to harbor life.
+                About 29.2% of Earth's surface is land with remaining 70.8% is
+                covered with water. Earth's distance from the Sun, physical properties
+                and geological history have allowed life to evolve and thrive.</p>
+              <p id='planet-internal'></p>
+              <p id='planet-geology'></p>
+              <p id='planet-overview'></p>
+            </div>
+            <div class="planet-source">
+              <span class="source">Source : <span class="source-link"> <a id='planet-src' href="#" target="_blank"> Wikipedia <img src="assets/icon-source.svg" alt="source-icon-link-to-wikipedia"> </a></span></span>
+              <a id="overview-src" href="#" target="_blank"></a>
+              <a id="structure-src" href="#" target="_blank"></a>
+              <a id="geology-src" href="#" target="_blank"></a>
+            </div>
+          </section>
+          <section class="planet-toggles">
+            <article class="planet-toggle">
+              <button onclick='overviewFunction()' class="toggle active"><span class="toggle-no">
+                  <h3>01</h3>
+                </span>
+                <h3>Overview</h3>
+              </button>
+            </article>
+            <article class="planet-toggle">
+              <button onclick='structureFunction()' class="toggle"><span class="toggle-no">
+                  <h3>02</h3>
+                </span>
+                <h3>Internal Structure</h3>
+              </button>
+            </article>
+            <article class="planet-toggle">
+              <button onclick='geologyFunction()' class="toggle"><span class="toggle-no">
+                  <h3>03</h3>
+                </span>
+                <h3>Surface Geology</h3>
+              </button>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <section class="planet-stats">
+        <article class="planet-stat">
+          <h4>Rotation Time</h4>
+          <h2 id='rotation'>0.99 days</h2>
+        </article>
+        <article class="planet-stat">
+          <h4>Revolution Time</h4>
+          <h2 id='revolution'>365.26 days</h2>
+        </article>
+        <article class="planet-stat">
+          <h4>Radius</h4>
+          <h2 id='radius'>0.99 days</h2>
+        </article>
+        <article class="planet-stat">
+          <h4>Average Temp.</h4>
+          <h2 id='temp'>16Deg</h2>
+        </article>
+      </section>
+    </div>
+  </template>
+
+</body>
+
+</html>
