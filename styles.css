@@ -184,10 +184,9 @@ body {
   top: 0;
   right: 0;
   background-color: var(--PrimaryBlack);
-  overflow-x: hidden;
   margin-top: 86px;
   transition: 0.5s;
-  overflow: hidden;
+  overflow-y: auto
 }
 
 
@@ -450,6 +449,10 @@ margin-right: 1.5rem;
 
 .medium-planet-padding {
   padding-left: 0;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
 }
 
 @media only screen and (min-width: 780px) {

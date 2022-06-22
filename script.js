@@ -37,6 +37,7 @@ fetch('data.json')
         document.querySelector('main').appendChild(myArray[0]);
         planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -45,6 +46,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[1]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -53,6 +55,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[2]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -61,6 +64,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[3]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -69,6 +73,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[4]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -77,6 +82,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[5]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -85,6 +91,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[6]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
 
@@ -93,6 +100,7 @@ fetch('data.json')
       document.querySelector('main').appendChild(myArray[7]);
       planetChosen();
         if (target.parentElement === pullOutContent) {
+        toggleScroll();
         pullOut.classList.toggle('toggled');
       }
       }
@@ -111,8 +119,13 @@ const nav = document.querySelector('.planetary-nav');
 
 hamburger.addEventListener('click', function() {
   pullOut.classList.toggle('toggled');
+  toggleScroll();
   console.log(planetTitle)
 })
+
+function toggleScroll() {
+  document.querySelector('body').classList.toggle('disable-scroll')
+}
 
 function planetChosen() {
 
@@ -202,8 +215,6 @@ function changeToggleColour() {
   })
 }
 
-
-
 function individualImageAdjustments(myArray) {
   myArray[0].querySelector('.planet-img').classList.toggle('small-planet-padding');
   myArray[3].querySelector('.planet-img').classList.toggle('small-planet-padding');
@@ -230,85 +241,3 @@ function individualImageAdjustments(myArray) {
   myArray[6].querySelector('.planet-img-geology').classList.toggle('planet-img-geology-medium');
   myArray[7].querySelector('.planet-img-geology').classList.toggle('planet-img-geology-medium');
 }
-
-
-
-// function mercuryChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[0]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Mercury)';
-//   })
-//   document.getElementsByClassName('mercury-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Mercury)'
-// }
-//
-// function venusChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[1]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Venus)';
-//   })
-//   document.getElementsByClassName('venus-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Venus)'
-// }
-
-// function earthChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[2]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Earth)';
-//   })
-//   document.getElementsByClassName('earth-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Earth)'
-// }
-//
-// function marsChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[3]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Mars)';
-//   })
-//   document.getElementsByClassName('mars-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Mars)'
-// }
-//
-// function jupiterChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[4]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Jupiter)';
-//   })
-//   document.getElementsByClassName('jupiter-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Jupiter)'
-// }
-//
-// function saturnChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[5]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Saturn)';
-//   })
-//   document.getElementsByClassName('saturn-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Saturn)'
-// }
-//
-// function uranusChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[6]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Uranus)';
-//   })
-//   document.getElementsByClassName('uranus-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Uranus)'
-// }
-//
-// function neptuneChosen(myArray)  {
-//   document.querySelector('main').innerHTML = "";
-//   document.querySelector('main').appendChild(myArray[7]);
-//   document.querySelectorAll('.border').forEach(border => {
-//     border.style.background='var(--Neptune)';
-//   })
-//   document.getElementsByClassName('neptune-dsk')[0].classList.add('link-border');
-//   document.querySelector('.link-border').style.borderColor = 'var(--Neptune)'
-// }
